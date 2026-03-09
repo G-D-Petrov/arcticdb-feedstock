@@ -16,7 +16,7 @@ build:
   # See: https://github.com/man-group/ArcticDB/pull/449
   # Skip all builds but the ones for Linux for the `libevent-2.1.10` specification.
   skip: true  # [win or (libevent == "2.1.10" and not linux and not py==39)]
-  number: 5
+  number: 6
 
   entry_points:
     - arcticdb_update_storage = arcticdb.scripts.update_storage:main
@@ -63,7 +63,7 @@ requirements:
     - pcre
     - gflags
     - msgpack-c
-    - aws-sdk-cpp
+    - aws-sdk-cpp >=1.11.405,<=1.11.591
     - azure-core-cpp
     - azure-identity-cpp
     - azure-storage-blobs-cpp
